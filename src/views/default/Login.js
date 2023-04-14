@@ -122,7 +122,7 @@ const Login = () => {
 				<div className="mb-5">
 					<p className="h6 text-white">Informe suas credenciais para fazer o login.</p>
 					<p className="h6 text-white">
-						Ainda não tem acesso? <NavLink to="/register">Clique aqui</NavLink>
+						<NavLink to="/register">Meu primeiro acesso</NavLink>
 					</p>
 				</div>
 				<div>
@@ -137,9 +137,9 @@ const Login = () => {
 							<Form.Control disabled={loading} type="password" name="password" onChange={handleChange} value={values.password} placeholder="Password" />
 							{errors.password && touched.password && <div className="d-block invalid-tooltip">{errors.password}</div>}
 
-							{/* <NavLink className="text-small position-absolute t-3 e-3" to="/forgot-password">
+							<NavLink className="text-small position-absolute t-3 e-3" to="/forgot-password">
 								Esqueceu a senha?
-							</NavLink> */}
+							</NavLink>
 						</div>
 						<div className="d-grid gap-2 mb-3">
 							<Button

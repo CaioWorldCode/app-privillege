@@ -110,11 +110,11 @@ const Register = () => {
 									</NavLink>
 								</div>
 								<div className="mb-5">
-									<h2 className="cta-1 mb-0 text-primary">Cadastro</h2>
+									<h2 className="cta-1 mb-0 text-primary">Meu primeiro acesso</h2>
 								</div>
 								<div className="mb-5">
 									<p className="h6 text-white">Preencha o formulário abaixo para efetuar o registro.</p>
-									<p className="h6 text-white">
+									<p className="h6 text-white mt-4">
 										Já tem cadastro? <NavLink to="/login">Voltar para login</NavLink>.
 									</p>
 								</div>
@@ -150,7 +150,7 @@ const Register = () => {
 												<input type="checkbox" className="form-check-input" name="terms" onChange={handleChange} value={values.terms} />
 												<label className="form-check-label">
 													Eu li e concordo com as {' '}
-													<NavLink to="/" target="_blank">
+													<NavLink to="/policies" target="_blank">
 														políticas de uso e privacidade.
 													</NavLink>
 												</label>
