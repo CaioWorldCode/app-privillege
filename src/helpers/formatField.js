@@ -10,6 +10,12 @@ import CsLineIcons from 'cs-line-icons/CsLineIcons'
 export default function formatField(fieldType, value, row) {
     let formated_value = value
 
+    function formatBytes(bytes, decimals = 2) {
+        var sizeInMB = (bytes / (1024*1024)).toFixed(2);
+
+        return sizeInMB
+    }
+    
     switch (fieldType) {
         default:
 
@@ -105,6 +111,14 @@ export default function formatField(fieldType, value, row) {
             formated_value = <div >
                 {row?.contract.description}
             </div>
+            break;
+
+        case 'filesize':
+            if (row?.size) {
+                formated_value = <div>
+                    {formatBytes(row?.size)} MB
+                </div>
+            }
             break;
     }
 

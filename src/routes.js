@@ -5,6 +5,7 @@ import { DEFAULT_PATHS } from 'config.js'
 const appRoot = DEFAULT_PATHS.APP.endsWith('/') ? DEFAULT_PATHS.APP.slice(1, DEFAULT_PATHS.APP.length) : DEFAULT_PATHS.APP;
 
 const home = lazy(() => import('views/home'))
+const files = lazy(() => import('views/files'))
 const signatures = lazy(() => import('views/signatures'))
 
 
@@ -23,6 +24,14 @@ const routesAndMenuItems = {
 			component: home,
 			label: 'Home',
 			icon: 'dashboard-1',
+			protected: true
+		},
+
+		{
+			path: `${appRoot}/files`,
+			component: files,
+			label: 'Arquivos',
+			icon: 'download',
 			protected: true
 		},
 
