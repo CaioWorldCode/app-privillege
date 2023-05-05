@@ -265,9 +265,9 @@ const DashboardsAnalytic = () => {
                                                                 {row.created_at}
                                                             </Col>
                                                             <Col xs={2}>
-                                                                <div onClick={() => downloadFile(row.file, row.original_name)} variant="outline-info" className="">
+                                                                <Button onClick={() => downloadFile(row.file, row.original_name)} variant="outline-info" className="btn btn-outline">
                                                                     <CsLineIcons icon="download" />
-                                                                </div>
+                                                                </Button>
 
                                                             </Col>
                                                         </Row>
@@ -341,9 +341,9 @@ const DashboardsAnalytic = () => {
                                                                 {row.created_at}
                                                             </Col>
                                                             <Col xs={2}>
-                                                            <div onClick={() => downloadFile(row.file, row.original_name)} variant="outline-info" className="">
+                                                                <Button onClick={() => downloadFile(row.file, row.original_name)} variant="outline-info" className="btn btn-icon btn-icon-only btn-outline-info mb-1">
                                                                     <CsLineIcons icon="download" />
-                                                                </div>
+                                                                </Button>
 
                                                             </Col>
                                                         </Row>
